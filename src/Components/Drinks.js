@@ -1,19 +1,19 @@
 import React from 'react';
 import axios from 'axios';
 
-class Menu extends React.Component {
+class Drinks extends React.Component {
     state = {
         menu: []
     }
 
     componentDidUpdate() {
         console.log('componentDidUpdate');
-        window.localStorage.setItem('entrees', JSON.stringify(this.state.menu));
+        window.localStorage.setItem('drinks', JSON.stringify(this.state.menu));
 
     }
 
     componentDidMount() {
-        var json = localStorage.getItem('entrees');
+        var json = localStorage.getItem('drinks');
         if (json == null) {
         axios.get('https://entree-f18.herokuapp.com/v1/menu/15')
 
@@ -40,7 +40,7 @@ class Menu extends React.Component {
                     <div className="card-header" id="headingOne">
                         <h2 className="mb-0">
                             <button className="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                Entrees
+                                Drinks
                             </button>
                         </h2>
                     </div>
@@ -66,4 +66,4 @@ class Menu extends React.Component {
     }
 }
 
-export default Menu;
+export default Drinks;

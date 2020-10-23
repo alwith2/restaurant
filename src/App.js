@@ -2,6 +2,9 @@ import React from 'react';
 import Menu from './Components/Menu';
 import Appetizers from './Components/Appetizers';
 import Desserts from './Components/Desserts';
+import Header from './Components/Header';
+import Lunch from './Components/Lunch';
+import Drinks from './Components/Drinks';
 
 
 class App extends React.Component {
@@ -9,33 +12,12 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <div className="App">
-          <header className="App-header">
-
-            <p>
-              Lacerated Brains
-        </p>
-
-          </header>
-        </div>
-        <div>
-          <p>
-            Appetizers
-      </p>
-        </div>
+        <Header />
         <Appetizers />
-        <div>
-          <p>
-            Entrees
-      </p>
-        </div>
+        <Lunch />
         <Menu />
-        <div>
-          <p>
-            Desserts
-      </p>
-        </div>
         <Desserts />
+        <Drinks />
       </>
     )
   }
